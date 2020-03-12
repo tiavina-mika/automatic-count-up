@@ -9,9 +9,13 @@ const App = () => {
     }
 
   }, 100);
-  if (count === 100) {
-    console.log('finished')
-  }
+
+  useEffect(() => {
+    if (count === 100) {
+      console.log('finished')
+    }
+  }, [count])
+
   return <h1>{count}</h1>;
 }
 
